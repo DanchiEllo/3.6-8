@@ -1,3 +1,8 @@
+package com.chat;
+
+import java.text.Collator;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -31,7 +36,7 @@ public class Main {
                 Collator collator = Collator.getInstance(new Locale("ru","RU"));
                 return collator.compare(user1.getName(), user2.getName());
             };
-            Collections.sort(map.get(age), comparator);
+            map.get(age).sort(comparator);
 
             for (User user : map.get(age)) {
                 System.out.println(user.toString());
